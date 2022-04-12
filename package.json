@@ -1,7 +1,7 @@
 {
-  "name": "cra-dapp-template",
-  "version": "1.0.1",
+  "name": "cra-template-web3",
+  "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/StableUnit/cra-dapp-template.git",
+  "repository": "https://github.com/StableUnit/cra-template-web3.git",
   "license": "MIT"
 }

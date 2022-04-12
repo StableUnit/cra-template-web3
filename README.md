@@ -1,6 +1,6 @@
 # Create-React-App Template for DApps
 
-For creating cra project `my-app` just run `npx create-react-app my-app --template cra-dapp-template`
+For creating cra project `my-app` just run `npx create-react-app my-app --template web3`
 Don't forget to create .env file with your INFURA_ID
 
 We use:
