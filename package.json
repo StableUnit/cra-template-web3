@@ -1,6 +1,6 @@
 {
   "name": "cra-template-web3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/StableUnit/cra-template-web3.git",
   "license": "MIT"
