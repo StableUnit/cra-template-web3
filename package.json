@@ -1,0 +1,7 @@
+{
+  "name": "cra-dapp-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/StableUnit/cra-dapp-template.git",
+  "license": "MIT"
+}
