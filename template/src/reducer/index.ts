@@ -1,6 +1,6 @@
 import Web3 from "web3";
 import Actions from "./actions";
-import {NetworkType} from "../utils/network";
+import { NetworkType } from "../utils/network";
 
 export type ActionType =
     | {
@@ -12,9 +12,9 @@ export type ActionType =
           payload?: string;
       }
     | {
-        type: Actions.SetChain;
-        payload?: NetworkType;
-    };
+          type: Actions.SetChain;
+          payload?: NetworkType;
+      };
 
 export interface ReducerState {
     web3: Web3;

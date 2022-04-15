@@ -1,7 +1,20 @@
 {
   "name": "cra-template-web3",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "repository": "https://github.com/StableUnit/cra-template-web3.git",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "web3",
+    "cra",
+    "create-react-app",
+    "template",
+    "cra-template",
+    "create-react-app-template",
+    "dapp",
+    "cra-web3",
+    "cra-dapp",
+    "blockchain",
+    "frontend"
+  ]
 }

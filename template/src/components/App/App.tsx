@@ -76,7 +76,7 @@ const App = () => {
     return (
         <div className="App">
             <Header onConnect={onConnect} onDisconnect={onDisconnect} />
-            <div>{chain}</div>
+            <div style={{ textAlign: "center" }}>{chain}</div>
         </div>
     );
 };
