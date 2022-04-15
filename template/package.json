@@ -5,6 +5,19 @@
     "files": [
         "dist"
     ],
+    "keywords": [
+        "web3",
+        "cra",
+        "create-react-app",
+        "template",
+        "cra-template",
+        "create-react-app-template",
+        "dapp",
+        "cra-web3",
+        "cra-dapp",
+        "blockchain",
+        "frontend"
+    ],
     "dependencies": {
         "@walletconnect/web3-provider": "^1.7.4",
         "bn.js": "^5.2.0",

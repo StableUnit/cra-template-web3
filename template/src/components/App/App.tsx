@@ -4,7 +4,7 @@ import Web3 from "web3";
 import Web3Modal, { IProviderOptions } from "web3modal";
 
 import Header from "../Header/Header";
-import { NETWORK, networkInfo, networkToId } from "../../utils/network";
+import { idToNetwork, NETWORK, networkInfo, networkToId } from "../../utils/network";
 import { DispatchContext, StateContext } from "../../reducer/constants";
 import Actions from "../../reducer/actions";
 
@@ -30,7 +30,7 @@ const providerOptions: IProviderOptions = {
 const web3Modal = new Web3Modal({ cacheProvider: true, providerOptions });
 
 const App = () => {
-    const { web3 } = useContext(StateContext);
+    const { web3, chain } = useContext(StateContext);
     const dispatch = useContext(DispatchContext);
 
     const onDisconnect = async () => {
@@ -53,8 +53,9 @@ const App = () => {
         provider.on("accountsChanged", async (accounts: string[]) => {
             dispatch({ type: Actions.SetAccount, payload: accounts[0] });
         });
-        provider.on("chainChanged", async (chainId: string) => {
-            console.log("chainChanged");
+        provider.on("chainChanged", async (hexChainId: string) => {
+            const chainId = Web3.utils.hexToNumber(hexChainId ?? "");
+            dispatch({ type: Actions.SetChain, payload: idToNetwork[chainId] });
         });
     };
 
@@ -67,11 +68,15 @@ const App = () => {
 
         const accounts = await newWeb3.eth.getAccounts();
         dispatch({ type: Actions.SetAccount, payload: accounts[0] });
+
+        const chainId = await web3.eth.getChainId();
+        dispatch({ type: Actions.SetChain, payload: idToNetwork[chainId] });
     };
 
     return (
         <div className="App">
             <Header onConnect={onConnect} onDisconnect={onDisconnect} />
+            <div>{chain}</div>
         </div>
     );
 };

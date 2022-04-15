@@ -6,6 +6,7 @@ import { ActionType, ReducerState } from "./index";
 export const initialState: ReducerState = {
     web3: new Web3(Web3.givenProvider),
     account: undefined,
+    chain: undefined,
 };
 
 export const StateContext = React.createContext(initialState);
